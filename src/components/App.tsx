@@ -3,12 +3,11 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 
 function App() {
   return (
-    <React.Fragment>
+    <div>
+      {/* normalize css */}
       <CssBaseline />
-      <div>
-        Hello, world!
-      </div>
-    </React.Fragment>
+      
+    </div>
   )
 }
 
