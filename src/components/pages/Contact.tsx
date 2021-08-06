@@ -10,10 +10,11 @@ import { faMap, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 function Contact() {
   return (
     <Grid
+      className="secondary"
       id="contact-container"
       container
       justifyContent="center"
-      spacing={2}
+      style={{ height: "100%" }}
     >
 
       {/* headline */}

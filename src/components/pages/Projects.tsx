@@ -23,7 +23,7 @@ const items = [
 
 const projects = [
   {
-    title: "Finctional Blog",
+    title: "Fictional Blog",
     github: "https://github.com/paunil/fictional-blog",
     website: "https://fictional-blog.paulina.tech/",
   },
@@ -86,12 +86,13 @@ function Projects() {
 
   return(
     <Grid
+      className="secondary"
       item
-      xs={10}
+      xs={12}
       container
       justifyContent="center"
       alignItems="center"
-      style={{padding: "15% 0%"}}
+      style={{padding: "30% 0%", height: "100%"}}
     >
 
       {/* headline */}
@@ -160,7 +161,7 @@ function Projects() {
               target="_blank" 
               style={{textTransform:"none"}}
             >
-              webiste
+              website
             </Button>
           </Grid>
         </Grid>

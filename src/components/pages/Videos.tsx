@@ -5,34 +5,41 @@ import { useState } from 'react'
 import AliceCarousel, { DotsItem } from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import '../../scss/pages/videos.scss'
+import IframeResizer from 'iframe-resizer-react'
 
 
 const items = [
-  <iframe
-    width="100%"
+  <IframeResizer
     src="https://www.youtube.com/embed/G0pIKrOVTEI"
     title="YouTube video player"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
+    width="100%"
+    scrolling="omit"
+    checkOrigin={false}
   />,
 
-  <iframe
-    width="100%"
+  <IframeResizer
     src="https://www.youtube.com/embed/cTsWwbeezh8"
     title="YouTube video player"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
+    width="100%"
+    scrolling="omit"
+    checkOrigin={false}
   />,
 
-  <iframe
-    width="100%"
+  <IframeResizer
     src="https://www.youtube.com/embed/-eixf5-BFMQ"
     title="YouTube video player"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
+    width="100%"
+    scrolling="omit"
+    checkOrigin={false}
   />,
 ]
 
@@ -73,12 +80,13 @@ function Videos() {
   
   return (
     <Grid
+      className="secondary"
       item
-      xs={10}
+      xs={12}
       container
       justifyContent="center"
       alignItems="center"
-      style={{ padding: "15% 0%" }}
+      style={{ padding: "30% 0%", height: "100%" }}
     >
 
       {/* headline */}
@@ -86,7 +94,7 @@ function Videos() {
         <Typography 
         variant="h5" 
         align="center"
-        style={{ paddingBottom: "8%"}}
+        style={{ paddingBottom: "4%"}}
         >
           WATCH ME CODE
         </Typography>

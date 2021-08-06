@@ -12,13 +12,20 @@ import '../../scss/common/colors.scss'
 function Home() {
   return(
     <Grid
+      className="secondary"
       id="home-container"
       container    
       justifyContent="center"
-      spacing={4}
+      style={{ height: "100%" }}
     >
       {/* image */}
-      <img width="100" src="./images/hexagon.png" alt="" />
+      <img 
+        width="150px"
+        height="150px" 
+        src="./images/hexagon.png" 
+        alt="" 
+        style={{textTransform:"none", marginBottom:"5%",}}
+      />
 
       {/* name and title */}
       <Grid item xs={12}>
@@ -46,10 +53,11 @@ function Home() {
         justifyContent="center"
       >
         <Button 
+          fullWidth
           className="primary"
           href="mailto:contact@paulina.tech"
           type=""
-          style={{textTransform:"none"}}
+          style={{textTransform:"none", margin:"10% 10% 5% 10%"}}
         >
           Email: contact@paulina.tech
         </Button>

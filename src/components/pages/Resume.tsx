@@ -10,10 +10,11 @@ import { faDownload, faSearch } from '@fortawesome/free-solid-svg-icons'
 function Resume() {
   return (
     <Grid
+      className="secondary"
       id="resume-container"
       container
       justifyContent="center"
-      spacing={2}
+      style={{ height: "100%" }}
     >
       {/* headline */}
       <Grid item xs={12}>
@@ -31,9 +32,9 @@ function Resume() {
         item 
         xs={12} 
         container 
-        justify="center"
+        justifyContent="center"
       >        
-        <img src="./images/resume.png" alt="hhh" width="200px" />
+        <img src="./images/resume.png" alt="hhh" width="55%" />
       </Grid>
       
 
