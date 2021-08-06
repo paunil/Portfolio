@@ -1,0 +1,19 @@
+.alice-carousel__dots {
+  margin: 15px;
+}
+
+.head-text {
+  position: relative;
+
+  img {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+  }
+}
+
+.text-on-image {
+  position: absolute;
+  display: flex;
+  align-content: center;
+  bottom: 40%;
+}

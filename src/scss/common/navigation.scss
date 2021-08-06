@@ -1,0 +1,14 @@
+// .navigation-ul {
+//   position: absolute;
+//   top: 60px;
+//   width: 100px;
+// }
+
+.navigation-li {
+  list-style: none;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}

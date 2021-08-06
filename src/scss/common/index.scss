@@ -1,0 +1,40 @@
+#star-animation {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background-color: black;
+}
+
+#app-container {
+  height: 100vh;
+  font-family: "Open Sans";
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+  }  
+}
+
+.menu-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 180px;
+  height: 180px;
+  background: #fff;
+  padding-top: 60px;
+}
+
+.menu-background2 {
+  width: 180px;
+  height: 180px;
+  background: #fff;
+  padding-top: 60px;
+}
