@@ -6,8 +6,11 @@
   -moz-transition: background-position 0.5s;
   transition: background-position 0.5s;
   padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   &:hover {
     background-position: -100% 0;
+    padding-left: 20px;
   }
 }
 
@@ -15,4 +18,7 @@
   color: white;
   background-color: #383838;
   padding: 10px;
+  padding-left: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }

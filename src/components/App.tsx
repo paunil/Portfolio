@@ -13,7 +13,23 @@ import Particles from 'react-particles-js'
 // font family
 let theme = createTheme({
   typography: {
-    fontFamily: 'Open Sans'
+    fontFamily: 'Open Sans',
+    h4: {
+      fontWeight: 800,
+      color: '#383838'
+    },
+    h5: {
+      fontWeight: 600,
+      color: '#383838'
+    },
+    subtitle1: {
+      fontWeight: 600,
+
+    },
+    body1: {
+      fontWeight: 600,
+      color: '#383838'
+    }
   }
 })
 
@@ -45,9 +61,17 @@ const sidebar = {
 };
 
 const HiddenHome = () => (
-  <Hidden mdUp>
-    <Home />
-  </Hidden>
+  <Grid
+    item
+    xs={10}
+    md={2}
+    lg={2}
+    style={{ height: "100%" }}
+  >
+    <Hidden mdUp>
+      <Home />
+    </Hidden>
+  </Grid>
 )
 
 
@@ -138,23 +162,13 @@ function App() {
 
 
             {/* main content */}
-            <Grid
-              item
-              container
-              xs={10}
-              sm={8}
-              md={4}
-              lg={4}
-              style={{ height: "100%" }}
-            >
-              <Switch>
-                <Route path={["/", "/home"]} exact component={HiddenHome} />
-                <Route path="/watch-me-code" component={Videos} />
-                <Route path="/projects" component={Projects} />
-                <Route path="/resume" component={Resume} />
-                <Route path="/contact" component={Contact} />
-              </Switch>
-            </Grid>
+            <Switch>
+              <Route path={["/", "/home"]} exact component={HiddenHome} />
+              <Route path="/watch-me-code" component={Videos} />
+              <Route path="/projects" component={Projects} />
+              <Route path="/resume" component={Resume} />
+              <Route path="/contact" component={Contact} />
+            </Switch>
           </Grid>
         </Grid>
 

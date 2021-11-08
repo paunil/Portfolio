@@ -16,6 +16,7 @@ const items = [
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
     width="100%"
+    height="220px"
     scrolling="omit"
     checkOrigin={false}
   />,
@@ -27,6 +28,7 @@ const items = [
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
     width="100%"
+    height="220px"
     scrolling="omit"
     checkOrigin={false}
   />,
@@ -38,6 +40,7 @@ const items = [
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
     width="100%"
+    height="220px"
     scrolling="omit"
     checkOrigin={false}
   />,
@@ -80,51 +83,63 @@ function Videos() {
   
   return (
     <Grid
-      className="secondary"
       item
-      xs={12}
       container
-      justifyContent="center"
-      alignItems="center"
-      style={{ padding: "30% 0%", height: "100%" }}
+      xs={10}
+      sm={8}
+      md={4}
+      lg={4}
+      style={{ height: "100%" }}
     >
+      <Grid
+        className="secondary"
+        item
+        xs={12}
+        container
+        justifyContent="center"
+        alignContent='center'
+        alignItems="center"
+        style={{ height: "100%" }}
+      >
 
-      {/* headline */}
-      <Grid item xs={12}>
-        <Typography 
-        variant="h5" 
-        align="center"
-        style={{ paddingBottom: "4%"}}
+        {/* headline */}
+        <Grid
+          item xs={12}
+          style={{marginBottom: '50px'}}
         >
-          WATCH ME CODE
-        </Typography>
+          <Typography 
+          variant="h5" 
+          align="center"
+          >
+            WATCH ME CODE
+          </Typography>
+        </Grid>
+
+
+        {/* button previous */}
+        <Grid item xs={1}>
+          <div className="btn-prev" style={{cursor:"pointer"}} onClick={slidePrev}>&lang;</div>
+        </Grid>
+        
+
+        {/* carousel */}
+        <Grid item xs={10}>
+          <AliceCarousel
+            mouseTracking
+            infinite
+            disableButtonsControls
+            items={items}
+            activeIndex={thumbIndex}
+            renderDotsItem={renderDotsItem}
+          />
+        </Grid>
+
+
+        {/* button next */}
+        <Grid item xs={1}>
+          <div className="btn-next" style={{cursor:"pointer"}} onClick={slideNext}>&rang;</div>
+        </Grid>
       </Grid>
-
-
-      {/* button previous */}
-      <Grid item xs={1}>
-        <div className="btn-prev" style={{cursor:"pointer"}} onClick={slidePrev}>&lang;</div>
-      </Grid>
-      
-
-      {/* carousel */}
-      <Grid item xs={10}>
-        <AliceCarousel
-          mouseTracking
-          infinite
-          disableButtonsControls
-          items={items}
-          activeIndex={thumbIndex}
-          renderDotsItem={renderDotsItem}
-        />
-      </Grid>
-
-
-      {/* button next */}
-      <Grid item xs={1}>
-        <div className="btn-next" style={{cursor:"pointer"}} onClick={slideNext}>&rang;</div>
-      </Grid>
-
     </Grid>
   )
 }

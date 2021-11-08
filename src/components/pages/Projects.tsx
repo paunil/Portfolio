@@ -86,93 +86,106 @@ function Projects() {
 
   return(
     <Grid
-      className="secondary"
       item
-      xs={12}
       container
-      justifyContent="center"
-      alignItems="center"
-      style={{padding: "30% 0%", height: "100%"}}
+      xs={10}
+      sm={8}
+      md={4}
+      lg={4}
+      style={{ height: "100%" }}
     >
+      <Grid
+        className="secondary"
+        item
+        xs={12}
+        container
+        justifyContent="center"
+        alignContent="center"
+        alignItems="center"
+        style={{ height: "100%"}}
+      >
 
-      {/* headline */}
-      <Grid item xs={12}> 
-        <Typography 
-          variant="h5" 
-          align="center"
-          style={{ paddingBottom: "8%"}}
-        >
-          PROJECTS
-        </Typography>
-      </Grid>
-
-
-      {/* button previous */}
-      <Grid item xs={1}>
-        <div className="btn-prev" style={{cursor:"pointer"}} onClick={slidePrev}>&lang;</div>
-      </Grid>
-
-
-      {/* carousel */}
-      <Grid className="head-text" item xs={10}>
-        <AliceCarousel
-          mouseTracking
-          infinite
-          disableButtonsControls
-          items={items}
-          activeIndex={thumbIndex}
-          renderDotsItem={renderDotsItem}
-        />
-
-        {/* text on image  */}
-        <Grid 
-          className="text-on-image"
-          container 
-          alignContent="center" 
-          justifyContent="center"
-        >
-          <Grid 
-            item 
-            xs={10}
-            container
-            justifyContent="center"
-            style={{marginBottom:"20px"}}
+        {/* headline */}
+        <Grid
+          item xs={12}
+          style={{marginBottom: '50px'}}
+        > 
+          <Typography 
+            variant="h5" 
+            align="center"
           >
-              {projects[thumbIndex].title}
-          </Grid>
-
-          <Grid item xs={6}>
-            <Button 
-              className="tertiary"
-              fullWidth
-              href={projects[thumbIndex].github}
-              target="_blank" 
-              style={{textTransform:"none"}}
-            >
-              &lt;code/&gt;
-            </Button>
-          </Grid>
-
-          <Grid item xs={6}>
-            <Button 
-              fullWidth
-              className="tertiary"
-              href={projects[thumbIndex].website}
-              target="_blank" 
-              style={{textTransform:"none"}}
-            >
-              website
-            </Button>
-          </Grid>
+            PROJECTS
+          </Typography>
         </Grid>
 
-      </Grid>
 
-      {/* button next */}
-      <Grid item xs={1}>
-        <div className="btn-next" style={{cursor:"pointer"}} onClick={slideNext}>&rang;</div>
+        {/* button previous */}
+        <Grid item xs={1}>
+          <div className="btn-prev" style={{cursor:"pointer"}} onClick={slidePrev}>&lang;</div>
+        </Grid>
+
+
+        {/* carousel */}
+        <Grid className="head-text" item xs={10}>
+          <AliceCarousel
+            mouseTracking
+            infinite
+            disableButtonsControls
+            items={items}
+            activeIndex={thumbIndex}
+            renderDotsItem={renderDotsItem}
+          />
+
+          {/* text on image  */}
+          <Grid 
+            className="text-on-image"
+            container 
+            alignContent="center" 
+            justifyContent="center"
+          >
+            <Grid 
+              item 
+              xs={10}
+              container
+              justifyContent="center"
+              style={{marginBottom:"20px"}}
+            >
+                {projects[thumbIndex].title}
+            </Grid>
+
+            <Grid item xs={6}>
+              <Button 
+                className="tertiary"
+                fullWidth
+                href={projects[thumbIndex].github}
+                target="_blank" 
+                style={{textTransform:"none"}}
+              >
+                &lt;code/&gt;
+              </Button>
+            </Grid>
+
+            <Grid item xs={6}>
+              <Button 
+                fullWidth
+                className="tertiary"
+                href={projects[thumbIndex].website}
+                target="_blank" 
+                style={{textTransform:"none"}}
+              >
+                website
+              </Button>
+            </Grid>
+          </Grid>
+
+        </Grid>
+
+        {/* button next */}
+        <Grid item xs={1}>
+          <div className="btn-next" style={{cursor:"pointer"}} onClick={slideNext}>&rang;</div>
+        </Grid>
+        
       </Grid>
-      
     </Grid>
   )
 }

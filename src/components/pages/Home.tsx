@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import '../../scss/pages/home.scss'
 import '../../scss/common/colors.scss'
+import { motion } from 'framer-motion'
 
 
 function Home() {
@@ -19,7 +20,11 @@ function Home() {
       style={{ height: "100%" }}
     >
       {/* image */}
-      <img 
+      <motion.img 
+        // animate={{ rotate: 180 }}
+        transition={{ type: "spring" }}
+        whileHover={{ rotate: 180 }}
+        whileTap={{ rotate: 180 }}
         width="150px"
         height="150px" 
         src="./images/hexagon.png" 
@@ -41,7 +46,7 @@ function Home() {
         <Typography 
           align="center"
         >
-          SOFTWARE DEVELOPER
+          FRONTEND DEVELOPER
         </Typography>
       </Grid>
 
@@ -49,6 +54,9 @@ function Home() {
       <Grid 
         item 
         xs={12} 
+        sm={8}
+        md={12}
+        lg={10}
         container 
         justifyContent="center"
       >
@@ -57,7 +65,7 @@ function Home() {
           className="primary"
           href="mailto:contact@paulina.tech"
           type=""
-          style={{textTransform:"none", margin:"10% 10% 5% 10%"}}
+          style={{textTransform:"none", margin:"10% 10% 5% 10%", fontWeight:600}}
         >
           Email: contact@paulina.tech
         </Button>

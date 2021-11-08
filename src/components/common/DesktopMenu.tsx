@@ -1,3 +1,4 @@
+import { Typography } from "@material-ui/core";
 import { Link, useLocation } from "react-router-dom";
 import '../../scss/common/desktopMenu.scss'
 
@@ -34,11 +35,12 @@ function DesktopMenu() {
           className="navigation-li"
         >
           <Link to={option.route} style={{width: '100%'}}>
-            <div 
+            <Typography
+              variant="subtitle1"
               className={location.pathname === option.route ? "desktop-menu-item-selected" : "desktop-menu-item"}
-            >{
-              option.text}
-            </div>
+            >
+              {option.text}
+            </Typography>
           </Link>
         </li>
     ))}
