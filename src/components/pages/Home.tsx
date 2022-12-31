@@ -38,7 +38,7 @@ function Home() {
           align="center" 
           variant="h4"
         >
-          PAULINA NILSSON
+          PAULINA ENGBERG
         </Typography>
       </Grid>
 
