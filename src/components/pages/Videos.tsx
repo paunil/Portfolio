@@ -1,16 +1,17 @@
 import Typography from '@material-ui/core/Typography'
-import { Grid } from '@material-ui/core'
+import Grid from '@mui/material/Grid';
 import { useState } from 'react'
 
 import AliceCarousel, { DotsItem } from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import '../../scss/pages/videos.scss'
-import IframeResizer from 'iframe-resizer-react'
+import IframeResizer from '@iframe-resizer/react'
 
 
 const items = [
   <IframeResizer
     src="https://www.youtube.com/embed/G0pIKrOVTEI"
+    license="GPLv3"
     title="YouTube video player"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -23,6 +24,7 @@ const items = [
 
   <IframeResizer
     src="https://www.youtube.com/embed/cTsWwbeezh8"
+    license="GPLv3"
     title="YouTube video player"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -35,6 +37,7 @@ const items = [
 
   <IframeResizer
     src="https://www.youtube.com/embed/-eixf5-BFMQ"
+    license="GPLv3"
     title="YouTube video player"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

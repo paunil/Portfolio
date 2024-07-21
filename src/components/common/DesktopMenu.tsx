@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core";
+import Typography from '@mui/material/Typography';
 import { Link, useLocation } from "react-router-dom";
 import '../../scss/common/desktopMenu.scss'
 

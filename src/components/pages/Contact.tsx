@@ -1,5 +1,5 @@
-import { Grid } from '@material-ui/core'
-import Typography from '@material-ui/core/Typography'
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import '../../scss/pages/contact.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

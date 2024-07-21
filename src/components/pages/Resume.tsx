@@ -1,6 +1,6 @@
-import { Grid } from '@material-ui/core'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import '../../scss/pages/resume.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
