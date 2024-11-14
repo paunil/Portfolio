@@ -6,7 +6,7 @@ import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/s
 import Hidden from '@material-ui/core/Hidden'
 
 import { HamburgerButton, Navigation, DesktopMenu } from './common'
-import { Home, Videos, Projects, Resume, Contact } from './pages/'
+import { Home, About, Videos, Projects, Resume, Contact } from './pages/'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { MoveDirection, OutMode } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
@@ -26,6 +26,10 @@ let theme = createTheme({
     },
     subtitle1: {
       fontWeight: 600
+    },
+    subtitle2: {
+      fontWeight: 400,
+      fontSize: '12px'
     },
     body1: {
       fontWeight: 600,
@@ -181,6 +185,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HiddenHome />} />
               <Route path="/home" element={<HiddenHome />} />
+              <Route path="/about-me" element={<About />} />
               <Route path="/watch-me-code" element={<Videos />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/resume" element={<Resume />} />

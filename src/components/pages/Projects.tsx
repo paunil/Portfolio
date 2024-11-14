@@ -14,7 +14,6 @@ const handleDragStart: DragEventHandler<HTMLImageElement> = (e) => e.preventDefa
 const style = {width:"100%"}
 
 const items = [
-  <img style={style} src="./images/blog.png" alt="" onDragStart={handleDragStart} />,
   <img style={style} src="./images/login.png" alt="" onDragStart={handleDragStart} />,
   <img style={style} src="./images/password.png" alt="" onDragStart={handleDragStart} />,
   <img style={style} src="./images/countdown.png" alt="" onDragStart={handleDragStart} />,
@@ -22,16 +21,6 @@ const items = [
 ];
 
 const projects = [
-  {
-    title: "Fictional Blog",
-    github: "https://github.com/paunil/fictional-blog",
-    website: "https://fictional-blog.paulina.tech/",
-  },
-  {
-    title: "Login Form",
-    github: "https://github.com/paunil/login-form",
-    website: "https://login-form.paulina.tech/",
-  },
   {
     title: "Password Generator",
     github: "https://github.com/paunil/password-generator",
@@ -41,6 +30,11 @@ const projects = [
     title: "Countdown Timer",
     github: "https://github.com/paunil/countdown-timer",
     website: "https://countdown-timer.paulina.tech/",
+  },
+  {
+    title: "Login Form",
+    github: "https://github.com/paunil/login-form",
+    website: "https://login-form.paulina.tech/",
   },
   {
     title: "Shape Changer",

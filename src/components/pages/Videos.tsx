@@ -1,5 +1,5 @@
-import Typography from '@material-ui/core/Typography'
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import { useState } from 'react'
 
 import AliceCarousel, { DotsItem } from 'react-alice-carousel'

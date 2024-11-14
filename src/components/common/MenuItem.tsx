@@ -32,7 +32,7 @@ function MenuItem(props: {route: string, text: string}) {
       whileTap={{ scale: 0.95 }}
     >
       <Link to={props.route}>
-        <div className="text-placeholder" style={{color: location.pathname === props.route ? '#00c2cb': '#383838'}}>{props.text}</div>
+        <div className="text-placeholder" style={{color: location.pathname === props.route ? '#E38CA6': '#383838'}}>{props.text}</div>
       </Link>
     </motion.li>
   );

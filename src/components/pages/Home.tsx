@@ -65,7 +65,11 @@ function Home() {
           className="primary"
           href="mailto:contact@paulina.tech"
           type=""
-          style={{textTransform:"none", margin:"10% 10% 5% 10%", fontWeight:600}}
+          style={{
+            textTransform:"none", 
+            margin:"10% 10% 5% 10%", 
+            fontWeight:600,
+          }}
         >
           Email: contact@paulina.tech
         </Button>

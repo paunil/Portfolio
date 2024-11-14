@@ -19,6 +19,10 @@ const menuOptions = [
     text: "HOME"
   },
   {
+    route: "/about-me",
+    text: "ABOUT ME"
+  },
+  {
     route: "/watch-me-code",
     text: "WATCH ME CODE"
   },
