@@ -21,10 +21,13 @@ function Home() {
     >
       {/* image */}
       <motion.img 
-        // animate={{ rotate: 180 }}
-        transition={{ type: "spring" }}
-        whileHover={{ rotate: 180 }}
-        whileTap={{ rotate: 180 }}
+        animate={{ rotate: 360 }}
+        transition={{ 
+          duration: 20, 
+          repeat: Infinity,
+          repeatType: 'loop',
+          ease: 'linear',
+        }}
         width="150px"
         height="150px" 
         src="./images/hexagon.png" 

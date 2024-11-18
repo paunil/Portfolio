@@ -55,7 +55,7 @@ function Contact() {
               size="1x" 
               icon={faLinkedin} 
             />
-            &nbsp; LinkedIn: &nbsp; Paunil
+            &nbsp; LinkedIn: &nbsp; linkedin.com/in/paunil/
           </Grid>
 
           {/* phone */}

@@ -14,9 +14,9 @@ const handleDragStart: DragEventHandler<HTMLImageElement> = (e) => e.preventDefa
 const style = {width:"100%"}
 
 const items = [
-  <img style={style} src="./images/login.png" alt="" onDragStart={handleDragStart} />,
   <img style={style} src="./images/password.png" alt="" onDragStart={handleDragStart} />,
   <img style={style} src="./images/countdown.png" alt="" onDragStart={handleDragStart} />,
+  <img style={style} src="./images/login.png" alt="" onDragStart={handleDragStart} />,
   <img style={style} src="./images/shapes.png" alt="" onDragStart={handleDragStart} />,
 ];
 
