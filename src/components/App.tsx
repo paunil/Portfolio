@@ -3,13 +3,13 @@ import Grid from '@mui/material/Grid';
 import { motion, useCycle } from 'framer-motion'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
-import Hidden from '@material-ui/core/Hidden'
 
 import { HamburgerButton, Navigation, DesktopMenu } from './common'
 import { Home, About, Videos, Projects, Resume, Contact } from './pages/'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { MoveDirection, OutMode } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
+import { useMediaQuery } from "@mui/material";
 
 
 // font family
@@ -65,25 +65,25 @@ const sidebar = {
   }
 };
 
-const HiddenHome = () => (
-  <Grid
-    item
-    xs={10}
-    lg={2}
-    style={{ height: "100%" }}
-  >
-    <Hidden mdUp>
-      <Home />
-    </Hidden>
-  </Grid>
-)
-
-
+const HiddenHome = () => {
+  const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
+  return (
+    <Grid
+      item
+      xs={10}
+      lg={2}
+      style={{ height: "100%" }}
+    >
+      {!isMdUp && <Home />}
+    </Grid>
+  );
+}
 
 function App() {
 
   const [isOpen, toggleOpen] = useCycle(false, true)
   const [init, setInit] = useState(false);
+  const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -161,24 +161,25 @@ function App() {
           >
 
             {/* desktop screen menu */}
-            <Hidden smDown>
-              <Grid
-                item
-                md={2}
-                lg={2}
-                style={{ height: "100%" }}
-              >
-                <DesktopMenu />
-              </Grid>
-              <Grid
-                item
-                xs={4}
-                style={{ height: "100%" }}
-              >
-                <Home />
-              </Grid>
-            </Hidden>
-
+            {isMdUp && (
+              <>
+                <Grid
+                  item
+                  md={2}
+                  lg={2}
+                  style={{ height: "100%" }}
+                >
+                  <DesktopMenu />
+                </Grid>
+                <Grid
+                  item
+                  xs={4}
+                  style={{ height: "100%" }}
+                >
+                  <Home />
+                </Grid>
+              </>
+            )}
 
             {/* main content */}
             <Routes>
@@ -194,7 +195,7 @@ function App() {
         </Grid>
 
         {/* hamburger menu */}
-        <Hidden mdUp>
+        {!isMdUp && (
           <motion.nav
             initial={false}
             animate={isOpen ? "open" : "closed"}>
@@ -203,7 +204,7 @@ function App() {
             </motion.div>
             <HamburgerButton toggle={() => toggleOpen()} />
           </motion.nav>
-        </Hidden>
+        )}
 
       </Router>
     </ThemeProvider>
