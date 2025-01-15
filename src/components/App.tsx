@@ -41,13 +41,13 @@ let theme = createTheme({
 // makes font size responsive
 theme = responsiveFontSizes(theme, {
   breakpoints: ["sm", "md", "lg"],
-  factor: 4,
+  factor: 2,
   variants: ["h4"]
 })
 
 const sidebar = {
   open: (height = 200) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    clipPath: `circle(${height * 2 + 200}px at calc(100% - 40px) 40px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -55,7 +55,7 @@ const sidebar = {
     }
   }),
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: "circle(30px at calc(100% - 40px) 40px)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -69,7 +69,6 @@ const HiddenHome = () => (
   <Grid
     item
     xs={10}
-    md={2}
     lg={2}
     style={{ height: "100%" }}
   >
