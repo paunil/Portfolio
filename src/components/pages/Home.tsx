@@ -66,7 +66,7 @@ function Home() {
         <Button 
           fullWidth
           className="primary"
-          href="mailto:contact@paulina.tech"
+          href="mailto:paulina.tech.engberg@gmail.com"
           type=""
           style={{
             textTransform:"none", 
@@ -74,7 +74,7 @@ function Home() {
             fontWeight:600,
           }}
         >
-          Email: contact@paulina.tech
+          paulina.tech.engberg@gmail.com
         </Button>
       </Grid>
 

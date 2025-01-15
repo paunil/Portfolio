@@ -83,7 +83,7 @@ function Contact() {
               size="1x" 
               icon={faEnvelope} 
             />
-              &nbsp; E-mail: &nbsp; contact@paulina.tech
+              &nbsp; E-mail: &nbsp; paulina.tech.engberg@gmail.com
           </Grid>
 
           {/* address */}
