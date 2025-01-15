@@ -36,16 +36,13 @@ function About() {
         <Grid item container xs={8}>
           <Typography variant="subtitle2">
             <p>Hi!</p> 
-            
-            I’m an ambitious frontend developer based in Stockholm, with a strong 
-            focus on building dynamic and user-centric web applications. I specialize 
-            in React and TypeScript, and I’m passionate about crafting clean, responsive 
-            interfaces that are both functional and visually appealing.
-            As someone who has a deep appreciation for design, I prioritize creating 
-            intuitive and aesthetically pleasing user experiences. I’m always eager to 
-            collaborate and bring my skills to new projects. If you think I could be 
-            a great fit for your team, feel free to reach out! 
-            
+
+            I'm an ambitious frontend developer based in Stockholm. 
+            I strive to create user friendly and nice looking solutions with the latest technologies. 
+            Currently with React and TypeScript as my main tools.
+            I’m always eager to collaborate and bring my skills to new projects. 
+            If you think I could be a good fit for your team, don't hesitate to reach out!
+           
             <p>// Paulina </p>
           </Typography>
 
